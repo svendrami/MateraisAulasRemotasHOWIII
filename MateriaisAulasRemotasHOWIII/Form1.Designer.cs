@@ -45,19 +45,23 @@
             this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.label5 = new System.Windows.Forms.Label();
+            this.textBoxId = new System.Windows.Forms.TextBox();
+            this.buttonAtualizar = new System.Windows.Forms.Button();
+            this.buttonNovo = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // textBoxTitulo
             // 
-            this.textBoxTitulo.Location = new System.Drawing.Point(12, 24);
+            this.textBoxTitulo.Location = new System.Drawing.Point(12, 74);
             this.textBoxTitulo.Name = "textBoxTitulo";
             this.textBoxTitulo.Size = new System.Drawing.Size(306, 20);
             this.textBoxTitulo.TabIndex = 0;
             // 
             // textBoxDescricao
             // 
-            this.textBoxDescricao.Location = new System.Drawing.Point(12, 75);
+            this.textBoxDescricao.Location = new System.Drawing.Point(12, 125);
             this.textBoxDescricao.Multiline = true;
             this.textBoxDescricao.Name = "textBoxDescricao";
             this.textBoxDescricao.Size = new System.Drawing.Size(306, 93);
@@ -65,14 +69,14 @@
             // 
             // textBoxLinkaula
             // 
-            this.textBoxLinkaula.Location = new System.Drawing.Point(12, 196);
+            this.textBoxLinkaula.Location = new System.Drawing.Point(12, 246);
             this.textBoxLinkaula.Name = "textBoxLinkaula";
             this.textBoxLinkaula.Size = new System.Drawing.Size(306, 20);
             this.textBoxLinkaula.TabIndex = 2;
             // 
             // textBoxLinkmatcomplementar
             // 
-            this.textBoxLinkmatcomplementar.Location = new System.Drawing.Point(12, 249);
+            this.textBoxLinkmatcomplementar.Location = new System.Drawing.Point(12, 299);
             this.textBoxLinkmatcomplementar.Name = "textBoxLinkmatcomplementar";
             this.textBoxLinkmatcomplementar.Size = new System.Drawing.Size(306, 20);
             this.textBoxLinkmatcomplementar.TabIndex = 3;
@@ -81,7 +85,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(12, 8);
+            this.label1.Location = new System.Drawing.Point(12, 58);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(108, 13);
             this.label1.TabIndex = 4;
@@ -91,7 +95,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(9, 59);
+            this.label2.Location = new System.Drawing.Point(9, 109);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(64, 13);
             this.label2.TabIndex = 5;
@@ -101,7 +105,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(9, 180);
+            this.label3.Location = new System.Drawing.Point(9, 230);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(77, 13);
             this.label3.TabIndex = 6;
@@ -111,7 +115,7 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(13, 233);
+            this.label4.Location = new System.Drawing.Point(13, 283);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(190, 13);
             this.label4.TabIndex = 7;
@@ -119,7 +123,7 @@
             // 
             // btnSalvar
             // 
-            this.btnSalvar.Location = new System.Drawing.Point(15, 288);
+            this.btnSalvar.Location = new System.Drawing.Point(116, 355);
             this.btnSalvar.Name = "btnSalvar";
             this.btnSalvar.Size = new System.Drawing.Size(75, 23);
             this.btnSalvar.TabIndex = 8;
@@ -129,16 +133,17 @@
             // 
             // btnExcluir
             // 
-            this.btnExcluir.Location = new System.Drawing.Point(129, 288);
+            this.btnExcluir.Location = new System.Drawing.Point(319, 355);
             this.btnExcluir.Name = "btnExcluir";
             this.btnExcluir.Size = new System.Drawing.Size(75, 23);
             this.btnExcluir.TabIndex = 9;
             this.btnExcluir.Text = "Excluir";
             this.btnExcluir.UseVisualStyleBackColor = true;
+            this.btnExcluir.Click += new System.EventHandler(this.btnExcluir_Click);
             // 
             // btnSair
             // 
-            this.btnSair.Location = new System.Drawing.Point(243, 288);
+            this.btnSair.Location = new System.Drawing.Point(425, 355);
             this.btnSair.Name = "btnSair";
             this.btnSair.Size = new System.Drawing.Size(75, 23);
             this.btnSair.TabIndex = 10;
@@ -157,7 +162,7 @@
             this.Column4});
             this.dataGridView1.Location = new System.Drawing.Point(324, 24);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(865, 293);
+            this.dataGridView1.Size = new System.Drawing.Size(865, 295);
             this.dataGridView1.TabIndex = 11;
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
@@ -191,11 +196,53 @@
             this.Column4.Name = "Column4";
             this.Column4.Width = 170;
             // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(13, 24);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(91, 13);
+            this.label5.TabIndex = 12;
+            this.label5.Text = "ID do Material:";
+            // 
+            // textBoxId
+            // 
+            this.textBoxId.Enabled = false;
+            this.textBoxId.Location = new System.Drawing.Point(110, 24);
+            this.textBoxId.Name = "textBoxId";
+            this.textBoxId.Size = new System.Drawing.Size(78, 20);
+            this.textBoxId.TabIndex = 13;
+            // 
+            // buttonAtualizar
+            // 
+            this.buttonAtualizar.Location = new System.Drawing.Point(214, 355);
+            this.buttonAtualizar.Name = "buttonAtualizar";
+            this.buttonAtualizar.Size = new System.Drawing.Size(75, 23);
+            this.buttonAtualizar.TabIndex = 14;
+            this.buttonAtualizar.Text = "Atualizar";
+            this.buttonAtualizar.UseVisualStyleBackColor = true;
+            this.buttonAtualizar.Click += new System.EventHandler(this.buttonAtualizar_Click);
+            // 
+            // buttonNovo
+            // 
+            this.buttonNovo.Location = new System.Drawing.Point(15, 355);
+            this.buttonNovo.Name = "buttonNovo";
+            this.buttonNovo.Size = new System.Drawing.Size(75, 23);
+            this.buttonNovo.TabIndex = 15;
+            this.buttonNovo.Text = "Limpar";
+            this.buttonNovo.UseVisualStyleBackColor = true;
+            this.buttonNovo.Click += new System.EventHandler(this.buttonNovo_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1195, 450);
+            this.ClientSize = new System.Drawing.Size(1195, 389);
+            this.Controls.Add(this.buttonNovo);
+            this.Controls.Add(this.buttonAtualizar);
+            this.Controls.Add(this.textBoxId);
+            this.Controls.Add(this.label5);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.btnSair);
             this.Controls.Add(this.btnExcluir);
@@ -236,6 +283,10 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.TextBox textBoxId;
+        private System.Windows.Forms.Button buttonAtualizar;
+        private System.Windows.Forms.Button buttonNovo;
     }
 }
 
