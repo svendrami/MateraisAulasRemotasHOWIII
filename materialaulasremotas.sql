@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Tempo de geração: 05-Set-2020 às 06:23
+-- Tempo de geração: 25-Set-2020 às 00:40
 -- Versão do servidor: 10.4.14-MariaDB
 -- versão do PHP: 7.4.9
 
@@ -69,11 +69,15 @@ CREATE TABLE `materiais` (
 INSERT INTO `materiais` (`idMaterial`, `idProfessor`, `idDisciplina`, `idTurma`, `TituloMaterial`, `DescricaoMaterial`, `LinkdaAula`, `LinkMaterial`, `AtivoMat`) VALUES
 (1, 1, 1, 4, 'Atividades sobre projeção geom', 'Aqui o professor escrever todas as instruções para que o aluno possa realizar a atividade/trabalho/avaliação online.\r\nTambém pode colocar um links de uma aula que acontecerá ou que já foi gravada e após um link complementar para esse material que poderá ser um link de um compartilhamento no google drive.', 'meet.google.com/wqw-qaz-ttt', 'linkdecompartilhamento aqui', 0),
 (2, 2, 2, 4, 'Material sobre concordância verbal', 'Bom dia!\r\nSegue material de nossa disciplina sobre concordância verbal que será pré-requisito para a concordância nominal. Leiam e façam as atividades dos links postados.\r\nQuaisquer dúvidas, estou à disposição para auxiliá-los nas mensagens.\r\nObrigada!', 'meet.google.com/qwe-ttt-iii', 'pode ser o link de um formulár', 0),
-(3, 3, 4, 2, 'Atividades de Geografia para as crianças', 'Bom dia!\r\nSegue o material para continuarmos o assunto que vimos hoje durante a nossa aula online.', 'link da aula gravada aqui', 'linkdecompartilhamento aqui', 0),
-(4, 4, 3, 3, 'Material de Ciências - atividade', 'Olá,\r\n\r\nsegue material complementar de nossa aula. Conteúdo para ser estudado para nossa avaliação da próxima semana.', 'link da aula aqui', 'pode ser o link de um formulário', 0),
-(5, 0, 0, 0, 'Aula de História - teste', 'Bom dia, \r\nsegue o material ', 'link aqui', 'link aqui', 0),
+(3, 3, 4, 2, 'Atividades de Geografia para as crianças', 'Bom dia!\r\nSegue o material para continuarmos o assunto que vimos hoje durante a nossa aula online.', 'link da aula gravada aqui ok', 'linkdecompartilhamento aqui', 0),
+(4, 4, 3, 3, 'Material de Ciências - atividade', 'Olá,\r\n\r\nsegue material complementar de nossa aula. Conteúdo para ser estudado para nossa avaliação da próxima semana.', 'link da aula aqui', 'pode ser o link de um formulário', 1),
+(5, 0, 0, 0, 'Aula de História - teste', 'Bom dia, \r\nsegue o material, certo?', 'link aqui link correto agora', 'link aqui', 0),
 (6, 0, 0, 0, 'Novo material no grid', 'Boa noite,\r\n\r\nsegue o link da aula gravada e  material para o nosso próximo assunto.', 'https://meet.google.com/mvf-ei', 'docs.google.com%2Fdocumen', 0),
-(8, 0, 0, 0, 'Regência verbal.', 'Boa noite, segue material sobre o novo assunto de nossa disciplina.', 'link de compartilhamento aqui', 'link para material complementar aqui', 0);
+(9, 0, 0, 0, 'Um teste em outro computador', 'Este é mais uma teste em outro computador. ', 'Com link da aula aqui', 'Material complementar aqui', 0),
+(10, 0, 0, 0, 'Inserção de um novo material em 22/09', 'Este é um questionário para entregar em 01/10. Bom trabalho a todos.', 'https://meet.google.com/abc-er', 'link ', 0),
+(11, 0, 0, 0, 'Mais um material em 21/09', 'Boa noite, pessoal!\r\n\r\nEstamos fazendo um teste aqui.\r\nObrigada!', 'Insira aqui o link da aula', 'Insira aqui link complementar, caso tenha.', 1),
+(13, 0, 0, 0, '', '', '', '', 1),
+(14, 0, 0, 0, 'Um material digitado mais tarde - fora do horário ', 'Boa noite', 'hkjhkjhkj', 'hkhkhk', 1);
 
 -- --------------------------------------------------------
 
@@ -195,7 +199,7 @@ ALTER TABLE `disciplina`
 -- AUTO_INCREMENT de tabela `materiais`
 --
 ALTER TABLE `materiais`
-  MODIFY `idMaterial` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
+  MODIFY `idMaterial` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
 
 --
 -- AUTO_INCREMENT de tabela `professor`
